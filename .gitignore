@@ -13,9 +13,6 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-# Mono auto generated files
-mono_crash.*
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -23,17 +20,14 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
-[Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
-**/.vs/
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
@@ -45,10 +39,9 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-# NUnit
+# NUNIT
 *.VisualState.xml
 TestResult.xml
-nunit-*.xml
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
@@ -63,9 +56,6 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
 # StyleCop
 StyleCopReport.xml
 
@@ -75,11 +65,7 @@ StyleCopReport.xml
 *_h.h
 *.ilk
 *.meta
-API/*.obj
-/*/*.obj
-*/*/*.obj
-/*/*/*.obj
-*/*/*/*.obj
+*.obj
 *.iobj
 *.pch
 *.pdb
@@ -136,6 +122,9 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
+# JustCode is a .NET coding add-in
+.JustCode
+
 # TeamCity is a build add-in
 _TeamCity*
 
@@ -146,22 +135,17 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
-# Coverlet is a free, cross platform Code Coverage Tool
-coverage*.json
-coverage*.xml
-coverage*.info
-
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
 
 # NCrunch
-NCrunch*
-.crunch.local.xml
+_NCrunch_*
+.*crunch*.local.xml
 nCrunchTemp_*
 
 # MightyMoose
-.mm.
+*.mm.*
 AutoTest.Net/
 
 # Web workbench (sass)
@@ -198,10 +182,8 @@ PublishScripts/
 
 # NuGet Packages
 *.nupkg
-# NuGet Symbol Packages
-*.snupkg
 # The packages folder can be ignored because of Package Restore
-*/[Pp]ackages/
+**/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -224,8 +206,6 @@ BundleArtifacts/
 Package.StoreAssociation.xml
 _pkginfo.txt
 *.appx
-*.appxbundle
-*.appxupload
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
@@ -273,11 +253,9 @@ ServiceFabricBackup/
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
-.bim_.settings
+*.bim_*.settings
 *.rptproj.rsuser
-*- [Bb]ackup.rdl
-*- [Bb]ackup ([0-9]).rdl
-*- [Bb]ackup ([0-9][0-9]).rdl
+*- Backup*.rdl
 
 # Microsoft Fakes
 FakesAssemblies/
@@ -299,11 +277,11 @@ node_modules/
 *.vbw
 
 # Visual Studio LightSwitch build output
-*/.HTMLClient/GeneratedArtifacts
-*/.DesktopClient/GeneratedArtifacts
-*/.DesktopClient/ModelManifest.xml
-*/.Server/GeneratedArtifacts
-*/.Server/ModelManifest.xml
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
 # Paket dependency manager
@@ -313,11 +291,15 @@ paket-files/
 # FAKE - F# Make
 .fake/
 
+# JetBrains Rider
+.idea/
+*.sln.iml
+
 # CodeRush personal settings
 .cr/personal
 
 # Python Tools for Visual Studio (PTVS)
-_pycache_/
+__pycache__/
 *.pyc
 
 # Cake - Uncomment if you are using it
@@ -356,12 +338,3 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-
-# Backup folder for Package Reference Convert tool in Visual Studio 2017
-MigrationBackup/
-
-# Ionide (cross platform F# VS Code tools) working folder
-.ionide/
-
-# Fody - auto-generated XML schema
-FodyWeavers.xsd
