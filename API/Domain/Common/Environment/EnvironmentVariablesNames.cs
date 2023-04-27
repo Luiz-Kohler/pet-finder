@@ -2,6 +2,7 @@
 {
     public static class EnvironmentVariablesNames
     {
-        public static string DBConnection => "DBConnection";
+        public static string SQLConnection => "SQLConnection";
+        public static string MongoDBConnection => "MongoDBConnection";
     }
 }

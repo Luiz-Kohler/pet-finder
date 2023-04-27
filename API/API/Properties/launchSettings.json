@@ -17,7 +17,8 @@
       "applicationUrl": "https://localhost:7021;http://localhost:5021",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DBConnection": "Data Source=localhost,1433;Initial Catalog=pet-finder;Persist Security Info=True;User ID=sa;Password=Admin@123",
+        "SQLConnection": "Data Source=localhost,1433;Initial Catalog=pet-finder;Persist Security Info=True;User ID=sa;Password=Admin@123",
+        "MongoDBConnection": "mongodb://sa:Admin@localhost:27017"
       }
     },
     "IIS Express": {
@@ -27,7 +28,8 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DBConnection": "Data Source=localhost,1433;Initial Catalog=pet-finder;Persist Security Info=True;User ID=sa;Password=Admin@123",
+        "SQLConnection": "Data Source=localhost,1433;Initial Catalog=pet-finder;Persist Security Info=True;User ID=sa;Password=Admin@123",
+        "MongoDBConnection": "mongodb://sa:Admin@localhost:27017"
       }
     },
     "Docker": {
@@ -37,7 +39,8 @@
       "publishAllPorts": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DBConnection": "Data Source = sqldata,1433; Initial Catalog = master; Persist Security Info = True; User ID = sa; Password = Admin@123",
+        "SQLConnection": "Data Source = sqldata,1433; Initial Catalog = master; Persist Security Info = True; User ID = sa; Password = Admin@123",
+        "MongoDBConnection": "mongodb://sa:Admin@localhost:27017"
       }
     }
   }

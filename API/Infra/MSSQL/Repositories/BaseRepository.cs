@@ -23,6 +23,7 @@ namespace Infra.MSSQL.Repositories
 
         public Task Update(TEntity entidade)
         {
+            entidade.UpdatedAt = DateTime.UtcNow;
             Entity.Update(entidade);
             return Task.CompletedTask;
         }
@@ -36,6 +37,7 @@ namespace Infra.MSSQL.Repositories
         public Task Delete(TEntity entidade)
         {
             entidade.IsActive = false;
+            entidade.UpdatedAt = DateTime.UtcNow;
             return Update(entidade);
         }
 
@@ -43,7 +45,7 @@ namespace Infra.MSSQL.Repositories
         {
             await Update(entidades.Select(entidade =>
             {
-                entidade.IsActive = false; ;
+                entidade.IsActive = false;
                 return entidade;
             }));
         }

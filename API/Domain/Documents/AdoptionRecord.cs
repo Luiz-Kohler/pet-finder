@@ -1,14 +1,18 @@
 ﻿using Domain.Common;
-using Domain.Entities;
 using Domain.Enums;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Domain.Documents
 {
-    public class AdoptionRecord : BaseEntity
+    public class AdoptionRecord 
     {
+        [BsonId]
+        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
+        public string? Id { get; set; }
+        public DateTime CreatedAt { get; set; }
         public Owner OldOwner { get; set; }
         public Owner NewOwner { get; set; }
-        public Pet Pet { get; set; }
+        public AdoptedPet Pet { get; set; }
     }
 
 
@@ -20,16 +24,14 @@ namespace Domain.Documents
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public bool IsActive { get; set; }
+        public OwnerAddress Address { get; set; }
     }
 
     public class OwnerAddress
     {
         public int Id { get; set; }
-        public string Country { get; set; }
         public string State { get; set; }
         public string City { get; set; }
-        public string Street { get; set; }
-        public string Number { get; set; }
     }
 
     public class AdoptedPet
@@ -44,5 +46,4 @@ namespace Domain.Documents
         public DateTime? UpdatedAt { get; set; }
         public bool IsActive { get; set; }
     }
-
 }

@@ -50,6 +50,7 @@ namespace Application
                 mc.AddProfile(new UserMap());
                 mc.AddProfile(new AddressMap());
                 mc.AddProfile(new PetMap());
+                mc.AddProfile(new AdoptionRecordMap());
             });
 
             IMapper mapper = mapperConfig.CreateMapper();

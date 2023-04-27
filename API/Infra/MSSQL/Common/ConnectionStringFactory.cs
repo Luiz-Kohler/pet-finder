@@ -13,7 +13,7 @@ namespace Infra.MSSQL.Common
 
         public string GetConnectionString()
         {
-            return _environmentVariables.GetEnvironmentVariable(EnvironmentVariablesNames.DBConnection) 
+            return _environmentVariables.GetEnvironmentVariable(EnvironmentVariablesNames.SQLConnection) 
                 ?? "Data Source=localhost,1433;Initial Catalog=pet-finder;Persist Security Info=True;User ID=sa;Password=Admin@123";
         }
 
