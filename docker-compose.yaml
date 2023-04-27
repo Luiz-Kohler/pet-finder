@@ -1,6 +1,14 @@
 version: '3.4'
 
 services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sa
+      MONGO_INITDB_ROOT_PASSWORD: Admin
+    ports:
+      - 27017:27017
+
   sqldata:
     image: mcr.microsoft.com/mssql/server:2017-latest
     environment:
@@ -19,4 +27,4 @@ services:
       context: ./API
       dockerfile: Dockerfile
     environment:
-      DBConnection: "Data Source = sqldata,1433; Initial Catalog = master; Persist Security Info = True; User ID = sa; Password = Admin@123"
+      SQLConnection: "Data Source = sqldata,1433; Initial Catalog = master; Persist Security Info = True; User ID = sa; Password = Admin@123"
