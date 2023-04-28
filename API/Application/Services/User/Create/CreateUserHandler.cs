@@ -42,12 +42,10 @@ namespace Application.Services.User.Create
 
             var token = _jwtHandler.CreateToken(user);
 
-            var response = new CreateUserResponse()
+            return new()
             {
                 Token = token
-            };
-
-            return response;
+            }; ;
         }
 
         private async Task<Address> CreateAddress(CreateUserRequest request)

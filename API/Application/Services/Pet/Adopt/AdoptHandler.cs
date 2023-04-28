@@ -27,7 +27,6 @@ namespace Application.Services.Pet.Adopt
 
         public async Task<AdoptResponse> Handle(AdoptRequest request, CancellationToken cancellationToken)
         {
-
             var newOnwer = await _userRepository.SelectOne(x => x.Id == request.NewOwnerId && x.IsActive);
 
             if (newOnwer is null)
