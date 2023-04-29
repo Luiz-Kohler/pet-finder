@@ -33,7 +33,6 @@ namespace Application.Services.Pet.Create
             if (owner is null)
                 throw new NotFoundException("User not found with this id.");
 
-
             var pet = _mapper.Map<Domain.Entities.Pet>(request);
             await _petRepository.Create(pet);
             await _petRepository.SaveChanges();
