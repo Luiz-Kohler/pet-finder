@@ -8,7 +8,6 @@ using Domain.IRepositories;
 using FizzWare.NBuilder;
 using FluentAssertions;
 using NSubstitute;
-using NSubstitute.ExceptionExtensions;
 using System.Linq.Expressions;
 using Address = Domain.Entities.Address;
 
