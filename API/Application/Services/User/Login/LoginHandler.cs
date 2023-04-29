@@ -29,16 +29,14 @@ namespace Application.Services.User.Login
             var user = await _userRepository.SelectOne(x => x.Email == request.Email && x.Password == passwrordHashed);
 
             if (user is null)
-                throw new NotFoundException("The credentials is wrong.");
+                throw new NotFoundException("The credentials are wrong.");
 
             var token = _jwtHandler.CreateToken(user);
 
-            var response = new LoginResponse()
+            return new()
             {
                 Token = token
             };
-
-            return response;
         }
     }
 }
