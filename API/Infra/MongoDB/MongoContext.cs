@@ -11,16 +11,8 @@ namespace Infra.MongoDB
         public MongoContext(IEnvironmentVariables environmentVariables)
         {
             var connectionString = environmentVariables.GetEnvironmentVariable(EnvironmentVariablesNames.MongoDBConnection);
-            try
-            {
-                var client = new MongoClient(connectionString);
-                Database = client.GetDatabase("pet-finder");
-
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
+            var client = new MongoClient(connectionString);
+            Database = client.GetDatabase("pet-finder");
         }
     }
 }

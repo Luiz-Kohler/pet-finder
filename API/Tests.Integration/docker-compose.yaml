@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sa
+      MONGO_INITDB_ROOT_PASSWORD: Admin
+    ports:
+      - 27017:27017
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - SA_PASSWORD=Admin@123
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
