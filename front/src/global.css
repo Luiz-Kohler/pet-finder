@@ -1,0 +1,19 @@
+:root {
+    font-family: sans-serif;
+    --primary-color: #FDFDFD;
+    --secundary-color: #2A55C4;
+    --tittle-color: #0B8ECF;
+    --bold-color: #585858;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
