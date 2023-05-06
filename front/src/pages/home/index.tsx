@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css'
 import Imagem from './../../assets/home-page.png'
-import Button from './../../components/button'
+import Button from '@mui/material/Button'
 
 const Home: React.FC = () => {
     return (
@@ -36,8 +36,8 @@ const Home: React.FC = () => {
                         </span>
 
                         <div className="actions">
-                            <Button text='See more pets'></Button>
-                            <Button text='Create account'></Button>
+                            <Button variant="contained">See more pets</Button>
+                            <Button variant="contained">Create account</Button>
                         </div>
                     </div>
                     <div className="image">
